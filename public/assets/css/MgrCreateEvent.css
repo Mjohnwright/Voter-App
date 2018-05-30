@@ -1,0 +1,52 @@
+ body,
+ .jumbotron {
+     background-color: #000000;
+     color: #c9c6c6;
+     font-weight: 100px;
+ }
+
+ .jumbotron {
+     padding: 10px;
+ }
+
+ .form-control {
+     border-radius: 0px;
+ }
+
+ h1,
+ h3 {
+     font-family: 'Maven Pro', sans-serif;
+     letter-spacing: 1px;
+ }
+
+ label,
+ p,
+ input {
+     font-family: 'Montserrat', sans-serif;
+ }
+
+ /* Button Styling*/
+
+ .btn-default {
+     color: #c9c6c6;
+     background-color: #000000;
+     border-color: #c9c6c6;
+     border-radius: 0px;
+     transition: all 0.5s;
+     cursor: pointer;
+     text-align: center;
+     font-family: 'Maven Pro', sans-serif;
+ }
+
+ .btn-default:hover {
+     background-color: #242424;
+     border-color: #c9c6c6;
+     border-width: 3px;
+     letter-spacing: 2px;
+ }
+
+ footer {
+     background-color: #000000;
+     padding: 50px 0px 0px 0px;
+     color: #c9c6c6;
+ }

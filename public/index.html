@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Montserrat:300" rel="stylesheet">
+        <style>
+        </style>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+
+                <ul class="nav navbar-nav">
+                    <!-- Trigger/Open The Modal -->
+                    <li>
+                        <button class="btn btn-lg" id="btnAbout">
+                            <b>About</b>
+                        </button>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li>
+                        <a href="/MgrCreateEvent.html">
+                            <button class="btn btn-lg" id="btnManager">
+                                <span>Manager Create Event</span>
+                            </button>
+                        </a>
+                        </li> -->
+
+                        <li>
+                            <a href="/MgrLogin.html">
+                                <button class="btn btn-lg" id="btnManager">
+                                    <span>Manager Login</span>
+                                </button>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/VolLogin.html">
+                                <button class="btn btn-lg" id="btnVolunteer">
+                                    <span>Volunteer Login</span>
+                                </button>
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="/VolEventListings.html">
+                                <button class="btn btn-lg" id="btnVolunteer">
+                                    <span>Volunteer Event Listings</span>
+                                </button>
+                            </a>
+                        </li> -->
+
+
+                </ul>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="aboutText">To exercise one’s right to vote is an integral part of a functional and healthy democratic form of government. It is a sacred practice given life from the very foundation of our Constitution—the right to free speech. Campaigns and candidates running for public office spend enormous amounts of money to get their message to the people. Some may label the amount as exorbitant or wasteful. In reality, spending money is an effective way to win elections, and elections count and therefore every vote counts.
+                        <br>
+                        <br> “Get Out and Get Involved” is a non-partisan group committed to strengthening the noble exercise of your right to vote by connecting enthusiastic volunteers to political campaigns in need of help on election day. Through our efforts we can help campaigns spend their money more efficiently by helping them to spread their message while amplifying your personal convictions about how your local government works.
+                        <br>
+                        <br> If you are a representative of a campaign, register your event to connect with those willing to help you. If you are a concerned voter, register to volunteer at a polling station to help spread the word.
+                        <br>
+                        <br> “Thinking isn’t agreeing or disagreeing. That’s voting” – Robert Frost</p>
+                </div>
+        </nav>
+
+        <div class="jumbotron jumbo-bkg">
+            <div class="container text-center">
+                <h1 id="countdown" class="hidden"></h1>
+                <p class="hidden">Get out and get involved!</p>
+            </div>
+            <!-- <div class="text-center hidden">
+                <a href="/users">
+                    <button class="btn btn-lg" id="btnUser">Find Event</button>
+                </a> -->
+
+                <a href="/VolCreateAccount.html">
+                    <button class="btn btn-lg" id="btnFind">Find Event</button>
+                </a>
+                <a href="MgrCreateAccount.html">
+                    <button class="btn btn-lg" id="btnCreate">Create Event</button>
+                </a>
+
+            </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+            <p>Copyright &#169 2018 Get Out and Get Involved</p>
+        </footer>
+
+    </body>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 2, 2018 10:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        // POPUP ABOUT TEXT
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btnAbout");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Button Animations
+        $(document).ready(function () {
+            $("h1.hidden").fadeIn(500).removeClass("hidden");
+            $("p.hidden").fadeIn(5000).removeClass("hidden");
+            $("div.hidden").fadeIn(7000).removeClass("hidden");
+        });
+    </script>
+
+    </htm

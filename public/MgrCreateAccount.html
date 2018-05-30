@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Manager Create Account Page</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/MgrCreateAccount.css" />
+
+        <!-- Latest compiled and minified CSS & JS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+
+
+    <body>
+
+
+
+        <!-- JUMBOTRON -->
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-12 col-sm-12">
+
+                    <div class="container text-center">
+                        <h1>Create an Account</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END JUMBOTRON -->
+
+
+        <div class="container">
+
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <div class="manager-container">
+                                <h1>Your Information</h1>
+
+                                <form id="manager-createAccount-form">
+                                    <label for="orgName">Organization Name:</label>
+                                    <input type="text" class="form-control" name="orgName" placeholder="Organization's Name" id="organization_name" required />
+
+                                    <label for="mgrName">Your First Name</label>
+                                    <input type="text" class="form-control" name="mgrName" placeholder="Your first name" id="first_name" required />
+
+                                    <label for="mgrLastName">Your Last Name</label>
+                                    <input type="text" class="form-control" name="mgrName" placeholder="Your last name" id="last_name" required />
+
+                                    <label for="city">email</label>
+                                    <input type="text" class="form-control" name="email" placeholder="" id="email" required />
+
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" name="city" placeholder="" id="city" required />
+
+
+                                    <!-- <label for="phone">Phone:</label>
+                            <input type="text" class="form-control" id="phone" name="phone" size="12" minlength="12" maxlength="12"
+                                pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Phone number i.e. xxx-xxx-xxxx"
+                                title="format 555-555-1234" required /> -->
+
+                                    <label for="mgrName">Password</label>
+                                    <input type="password" class="form-control" name="mgrName" placeholder="password" id="password" required />
+
+                                    <label for="mgrName">Confirm Password</label>
+                                    <input type="password" class="form-control" name="mgrName" placeholder="password" id="passwordConf" required />
+
+                                    <input class="submit" type="submit" id="submit" value="Submit">
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- Custom Script -->
+            <script src="assets/js/MgrCreateAccount.js" type="text/javascript"></script>
+
+            <!-- <script>
+                $(document).ready(function () {
+                    console.log("ready!");
+
+                    $("#submit").click(function (event) {
+                        event.preventDefault();
+                        validation();
+
+                        function validation() {
+                            var password = $("#password").val();
+                            var password2 = $("#passwordConf").val();
+                            if (password != password2) {
+                                $("#passwordConf").val("");
+                                $("#password").val("");
+                                $(".password-area").html(
+                                    "<div class='password-area'><h3><strong>Passwords do not match. Please try again<strong></h3></div>"
+                                );
+                            } else {
+                                $(".alert-area").html("");
+                            }
+                        }
+
+                        var NewMgr = {
+                            orgName: $("#orgName").val().trim(),
+                            mgrFirstName: $("#mgrFirstName").val().trim(),
+                            mgrLastName: $("#mgrLastName").val().trim(),
+                            MgrPhoneNumber: $("#phone").val().trim(),
+                            password: $("#password").val().trim(),
+                            passwordConf: $("#passwordConf").val().trim()
+
+                        }
+                        console.log("New Object created", NewMgr);
+
+                        app.post("/api/", function (req, res) {
+
+                            console.log();
+                        });
+
+                        // redirect to MgrEventCreate.html
+                        window.location.href = "MgrEventCreate.html";
+                        console.log("redirecting");
+                    })
+
+                    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
+                    // It will do this by sending out the value "true" have a table
+                    // req.body is available since we're using the body-parser middleware
+                    if (tableData.length < 5) {
+                        tableData.push(req.body);
+                        res.json(true);
+                    } else {
+                        waitListData.push(req.body);
+                        res.json(false);
+                    }
+                });
+            </script> -->
+            </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,194 @@
+body {
+    height: 100%;
+    background-color: #000000;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #000000;
+    color: #c9c6c6;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.jumbo-bkg {
+    background: url("../images/vote.jpg") no-repeat;
+    background-position: center;
+    margin: 0;
+    background-color: #000000;
+    color: #c9c6c6;
+    height: 600px;
+}
+
+#countdown {
+    color: #c9c6c6;
+    display: hidden;
+    font-size: 48px;
+    font-family: 'Maven Pro', sans-serif;
+    letter-spacing: 3px;
+}
+
+.jumbotron {
+    padding: 0px;
+}
+
+.jumbotron p {
+    color: #c9c6c6;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* *** BEGINNING OF BUTTONS *** */
+
+button {
+    border-radius: 15px;
+    background: #000000;
+    color: #c9c6c6;
+    margin: 0px 20px;
+    width: 200px;
+    height: 50px;
+}
+
+/* BUTTON ABOUT */
+
+#btnAbout {
+    float: left;
+    border: none;
+    padding-top: 30px;
+}
+
+/* BUTTON MANAGER */
+
+#btnManager {
+    background-color: #000000;
+    border: none;
+    color: #c9c6c6;
+    text-align: center;
+    width: 170px;
+    transition: all 0.5s;
+    cursor: pointer;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+#btnManager span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#btnManager span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btnManager:hover span {
+    padding-right: 25px;
+    color: #c9c6c6;
+}
+
+#btnManager:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* BUTTON USER */
+
+#btnUser {
+    margin-top: 400px;
+}
+
+#btnFind,
+#btnCreate {
+    color: #c9c6c6;
+    background-color: #000000;
+    border-color: #c9c6c6;
+    border-radius: 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    margin-top: 30%;
+}
+
+#btnFind:hover,
+#btnCreate:hover {
+    background-color: #242424;
+    border-color: #c9c6c6;
+    border-width: 3px;
+    letter-spacing: 2px;
+}
+
+/* *** END OF BUTTONS *** */
+
+/* *** BEGINNING OF MODAL *** */
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #000000;
+    /* Fallback color */
+    background-color: #000000
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #000000;
+    color: #c9c6c6;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* *** END OF MODAL *** */
+
+footer {
+    background-color: #000000;
+    padding: 50px 0px 0px 0px;
+    color: #c9c6c6;
+}
