@@ -2,7 +2,7 @@
 
 ### Overview
 
-This app is the work of 4 developers: Isaac Lubinski, Sara Broad, Kate Wang, and Matthew Wright
+This app is the work of 4 developers: [Isaac Lubinski](https://github.com/rustinpeace91), [Sara Broad](https://github.com/SaraBroad), [Kate Wang](https://github.com/KTWangster), and [Matthew Wright](https://github.com/Mjohnwright)
 
 To exercise one’s right to vote is an integral part of a functional and healthy democratic form of government. It is a sacred practice given life from the very foundation of our Constitution—the right to free speech. Campaigns and candidates running for public office spend enormous amounts of money to get their message to the people. Some may label the amount as exorbitant or wasteful. In reality, spending money is an effective way to win elections, and elections count and therefore every vote counts. 
 
