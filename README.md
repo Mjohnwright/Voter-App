@@ -19,7 +19,7 @@ We decided we would focus on 3 major areas:
   
   2. <strong>Logic and Routing</strong> We created routes to POST and GET data to and from the datanase base.  The POST routes write data to the database and are triggered by an event listener. The GET routes fetches data from the database to display in the DOM using ajax calls.
   
-  3. <strong>Desgin</strong> We wanted the design to be simple, but inspiring.   The black and white color scheme artistically showcases and symbolized the rawness and power the people wield in a civilized society.  From a functional perspective it is easy to navigate and invites the user to delve deeper into the site’s confines.  The site is created using BootStrap 4, CSS and javascript
+  3. <strong>Design</strong> We wanted the design to be simple, but inspiring.   The black and white color scheme artistically showcases and symbolized the rawness and power the people wield in a civilized society.  From a functional perspective it is easy to navigate and invites the user to delve deeper into the site’s confines.  The site is created using BootStrap 4, CSS and javascript
   
 
 ### Screenshot
